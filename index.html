@@ -68,10 +68,10 @@
       line-height: 1.7;
     }
 
-    /* Key Message Box Styling - 가독성 핵심 */
+    /* Key Message Box Styling */
     .message-box {
-      background-color: #f0f8ff; /* 연한 파랑 배경 */
-      border-left: 5px solid #3273dc; /* 파란색 포인트 라인 */
+      background-color: #f0f8ff; /* Light Blue Background */
+      border-left: 5px solid #3273dc; /* Blue Point Line */
       padding: 1.25rem;
       margin: 1.5rem 0;
       border-radius: 0 8px 8px 0;
@@ -99,10 +99,12 @@
       transition: transform 0.2s;
     }
     
-    /* Pie Chart Sizing Fix */
+    /* Pie Chart Sizing Fix (For Figure 2b & 3) */
     .pie-chart-img {
-        max-width: 70%; /* 파이 차트 크기 조절 */
+        max-width: 60%; 
         height: auto;
+        margin: 0 auto;
+        display: block;
     }
     
     .img-main {
@@ -165,10 +167,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This project investigates the ongoing shift in fashion retail by analyzing both macro-level market trends and micro-level consumer behaviors from two datasets. U.S. Census data shows that while traditional clothing retail only doubled from 1999 to 2023, the e-commerce sector expanded by over 2,500%.
+            This project investigates the ongoing shift in fashion retail by analyzing both macro-level market trends and micro-level consumer behaviors from two datasets. U.S. Census data shows that while traditional clothing retail grew moderately from 1999 to 2023, the e-commerce sector expanded exponentially, recording over <strong>1,200% growth</strong>.
           </p>
           <p>
-            A consumer-level analysis of 3,900 online purchase records identifies the key driver of this surge: female shoppers in their 20s–30s, with a strong preference for ‘Clothing’. Spending was found to be age-independent, while December consistently showed seasonal spikes, highlighting the importance of timing in online fashion sales.
+            A consumer-level analysis of 3,900 online purchase records reveals that this surge is not limited to the younger generation. The data identifies a <strong>broad engagement across all age groups (20s–60s)</strong>, challenging the stereotype that online shopping is solely for the youth. 'Clothing' remains the dominant category. Furthermore, spending was found to be age-independent, while December consistently showed seasonal spikes, highlighting the importance of timing in online fashion sales.
           </p>
         </div>
       </div>
@@ -209,7 +211,7 @@
           </p>
           <div class="message-box">
              <span class="message-title">💡 Insight: The Retail Apocalypse</span>
-             "The divergence is dramatic. Traditional clothing retail (blue line) has grown slowly, reflecting market saturation. In stark contrast, the e-commerce sector (pink line) has surged, growing by over <strong>2,500%</strong>. This gap visualizes the structural shift in consumer habits."
+             "The divergence is dramatic. Traditional clothing retail (blue line) has grown slowly, reflecting market saturation. In stark contrast, the e-commerce sector (pink line) has surged, growing by over <strong>1,200%</strong>. This gap visualizes the structural shift in consumer habits."
           </div>
         </div>
         
@@ -219,27 +221,6 @@
             <strong>Figure 6. Actual Sales Volume: E-commerce vs. Traditional (1999–2023).</strong><br>
             The widening gap illustrates the structural shift in consumer habits.
           </figcaption>
-        </div>
-        <br>
-
-        <!-- Figure 7: Sector Comparison -->
-        <h3 class="title is-4">Resilience of the Clothing Sector</h3>
-        <div class="content has-text-justified">
-          <p>
-             When comparing 'Clothing' to other sectors like 'Jewelry' and 'Sporting Goods', we see distinct patterns.
-          </p>
-          <div class="message-box">
-            <span class="message-title">💡 Insight: A Stable Pillar</span>
-            "Clothing (Black Line) maintains a stable growth pattern, free from the volatile swings seen in sporting goods (Pink Line). This reinforces fashion's role as a <strong>steady pillar</strong> of the retail economy despite the digital shift."
-          </div>
-        </div>
-
-        <div class="chart-container has-text-centered">
-            <img src="./static/images/figure7_sector_comparison.png" alt="Sector Comparison" class="chart-image img-main">
-            <figcaption>
-              <strong>Figure 7. Actual Sales Volume by Sector (1993–2023).</strong><br>
-              Clothing demonstrates stability compared to more volatile discretionary sectors.
-            </figcaption>
         </div>
 
       </div>
@@ -262,7 +243,6 @@
         </div>
         
         <!-- Figure 2: Composite (Bar + Pie) Side by Side -->
-        <!-- Fixed: Added 'is-vcentered' and adjusted Pie chart width -->
         <div class="columns is-centered is-vcentered">
           
           <div class="column is-7 has-text-centered">
@@ -273,7 +253,6 @@
           </div>
 
           <div class="column is-5 has-text-centered">
-             <!-- 파이 차트는 정사각형이라 너무 커 보일 수 있어서 max-width를 70%로 제한 -->
              <img src="./static/images/figure2b_gender_pie.png" alt="Gender Ratio" class="chart-image pie-chart-img">
              <figcaption>
               <strong>Figure 2b. Overall Gender Ratio.</strong>
@@ -284,8 +263,8 @@
         
         <div class="content has-text-justified">
             <div class="message-box">
-                <span class="message-title">💡 Insight: Diverse Age, Distinct Gender</span>
-                "As shown in <strong>Figure 2a</strong>, the market is not dominated by a single age group; rather, it is active across all generations from Gen Z (20s) to Boomers (60s). However, the gender gap (Fig 2b) is persistent, identifying the market as structurally diverse in age but distinct in gender composition."
+                <span class="message-title">💡 Insight: Broad Demographics</span>
+                "As shown in <strong>Figure 2a</strong>, the market is not dominated by a single age group; rather, it is active across all generations from Gen Z (20s) to Boomers (60s). <strong>Figure 2b</strong> reveals the gender breakdown of this specific dataset, providing a baseline for understanding the consumer profile."
              </div>
         </div>
 
@@ -388,7 +367,7 @@
             This project provides a data-driven confirmation of the "E-commerce Revolution." The narrative is clear and compelling: The U.S. retail landscape has fundamentally shifted from physical to digital, a transformation quantified by the massive growth in e-commerce sales (Fig 1 & 6).
           </p>
           <p>
-            This growth is not abstract; it is driven by a specific, powerful demographic—female consumers who are primarily purchasing clothing (Fig 2 & 3). Yet, the market is inclusive, with significant spending power found across all age groups (Fig 4). For retailers, the takeaway is strategic: maintain a broad age appeal, focus on the female demographic, and optimize operations for the critical December surge (Fig 8). These findings portray a market that is not only booming but also strategically aligned with evolving consumer demands.
+            This growth is driven by fashion demand (Fig 3) and supported by consumers across all age groups (Fig 2 & 4), anchored by the critical December surge (Fig 8). These findings portray a market that is not only booming but also strategically aligned with evolving consumer demands.
           </p>
         </div>
       </div>
