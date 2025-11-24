@@ -29,8 +29,28 @@
       color: #2c3e50;
     }
     
+    /* HERO SECTION WITH BACKGROUND IMAGE */
     .hero {
         background-color: #f5f5f5;
+        position: relative; /* 가상 요소를 위한 위치 기준 */
+        overflow: hidden; /* 이미지가 넘치지 않게 */
+    }
+
+    /* 배경 이미지 설정 (가상 요소 활용) */
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* 업로드된 이미지 경로 설정 */
+        background-image: url('./static/images/online-shopping-ecommerce-ss-1920_1.jpg'); 
+        background-size: cover; /* 이미지를 꽉 채우게 */
+        background-position: center; /* 중앙 정렬 */
+        opacity: 0.2; /* 투명도 조절 (0.1 ~ 0.3 추천) */
+        z-index: -1; /* 텍스트 뒤로 배치 */
+        filter: grayscale(30%); /* 선택사항: 흑백 톤을 살짝 섞어 차분하게 */
     }
 
     .publication-title {
@@ -199,7 +219,7 @@
   </div>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION WITH BACKGROUND IMAGE -->
 <section class="hero is-medium" style="margin-top: 3rem;"> <!-- 네비게이션 바 공간 확보 -->
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -218,6 +238,9 @@
           <div class="is-size-5 publication-authors" style="margin-top: 10px;">
             <span class="author-block"><sup>1</sup>George Mason University Korea</span>
           </div>
+          
+          <!-- (이전 이미지 태그 제거됨) -->
+
         </div>
       </div>
     </div>
