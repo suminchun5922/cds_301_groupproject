@@ -3,125 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="The E-commerce Revolution: Analyzing macro trends and micro consumer behaviors in the US fashion market.">
-  <meta name="keywords" content="E-commerce, Fashion, Data Visualization, Retail Trends">
+        content="The E-commerce Revolution: Who is the Online Fashion Consumer?">
+  <meta name="keywords" content="Data Visualization, Fashion, E-commerce, CDS 301">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The E-commerce Revolution: Who is the Online Fashion Consumer?</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
 
-  <!-- Bulma CSS (CDN) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  
-  <!-- FontAwesome (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Noto Sans', sans-serif;
-      background-color: #fdfdfd;
-    }
-    
-    .hero {
-        background-color: #f5f5f5;
-    }
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
 
-    .publication-title {
-      font-family: 'Google Sans', sans-serif;
-      font-weight: 700;
-      margin-bottom: 1.5rem !important;
-    }
-
-    .publication-authors {
-      font-family: 'Google Sans', sans-serif;
-      color: #4a4a4a;
-    }
-
-    .author-block {
-      margin-right: 10px;
-    }
-
-    .container.is-max-desktop {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 3rem 1.5rem;
-    }
-
-    .title.is-3 {
-      margin-top: 2rem;
-      margin-bottom: 1.5rem;
-      font-family: 'Google Sans', sans-serif;
-      color: #363636;
-    }
-
-    .content {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    /* Custom Box for Key Messages */
-    .message-box {
-      background-color: #f0f4f8;
-      border-left: 5px solid #3273dc;
-      padding: 1.25rem;
-      margin-top: 1rem;
-      border-radius: 4px;
-    }
-
-    .message-title {
-        font-weight: bold;
-        color: #3273dc;
-        display: block;
-        margin-bottom: 0.5rem;
-    }
-
-    .analysis-text {
-        margin-bottom: 1rem;
-    }
-
-    /* Image Styling */
-    .chart-image {
-      border: 1px solid #eee;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      max-width: 100%;
-      height: auto;
-    }
-    
-    .img-small75 {
-        width: 75%;
-        margin: 0 auto;
-        display: block;
-    }
-
-    figcaption {
-      margin-top: 0.5rem;
-      font-style: italic;
-      color: #666;
-    }
-
-    .footer-compact {
-        padding: 3rem 1.5rem;
-        background-color: #f5f5f5;
-    }
-    
-    /* Responsive adjustments */
-    @media screen and (max-width: 768px) {
-        .publication-title {
-            font-size: 2rem !important;
-        }
-        .img-small75 {
-            width: 100%;
-        }
-    }
-  </style>
-
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
 
@@ -131,7 +42,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">The E-commerce Revolution:<br>Who is the Online Fashion Consumer?</h1>
+          <h1 class="title is-1 publication-title">The E-commerce Revolution: Who is the Online Fashion Consumer?</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               Sumin Chun<sup>1</sup> and
@@ -143,6 +54,31 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>George Mason University Korea</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -158,7 +94,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This project investigates the ongoing shift in fashion retail by analyzing both macro-level market trends and micro-level consumer behaviors from two datasets. U.S. Census data shows that while traditional clothing retail only doubled from 1999 to 2023, the e-commerce sector expanded by over 2,500%. A consumer-level analysis of 3,900 online purchase records identifies the key driver of this surge: female shoppers in their 20s–30s, with a strong preference for ‘Clothing’. Spending was found to be age-independent, while December consistently showed seasonal spikes, highlighting the importance of timing in online fashion sales.
+            This project investigates the ongoing shift in fashion retail by analyzing both macro-level market trends and micro-level consumer behaviors from two datasets. U.S. Census data shows that while traditional clothing retail only doubled from 1999 to 2023, the e-commerce sector expanded by over 2,500%.
+          </p>
+          <p>
+            A consumer-level analysis of 3,900 online purchase records identifies the key driver of this surge: female shoppers in their 20s–30s, with a strong preference for ‘Clothing’. Spending was found to be age-independent, while December consistently showed seasonal spikes, highlighting the importance of timing in online fashion sales.
           </p>
         </div>
       </div>
@@ -166,235 +105,212 @@
   </div>
 </section>
 
-<!-- INTRODUCTION -->
+
+<!-- SECTION 1: MACRO TRENDS -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Introduction</h2>
-    <div class="content has-text-justified">
-      <p>
-        The fashion industry is undergoing a dramatic shift, widely termed the “E-commerce Revolution.” While the traditional U.S. clothing retail market has grown steadily since 1992, online retail has surged, redefining the structure of fashion commerce. This project aims to quantify this transformation by analyzing long-term market data and consumer behavior. We address two core questions: 
-      </p>
-      <ul>
-          <li><strong>Macro:</strong> How large is the e-commerce sector’s growth compared to traditional retail?</li>
-          <li><strong>Micro:</strong> Who is driving this digital shift, and what defines their purchasing patterns?</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">1. Market Dynamics: The Scale of Disruption</h2>
 
-<!-- DATA SOURCES OVERVIEW -->
-<section class="section" style="background-color: #fafafa;">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">📊 Data Sources Overview</h2>
-    <div class="content has-text-justified">
-      <p>This project bridges <strong>'Macro Trends'</strong> and <strong>'Micro Behaviors'</strong> by combining two distinct datasets with contrasting characteristics.</p>
-      
-      <div class="columns is-centered">
-          <div class="column is-6">
-            <div class="box">
-                <h4 class="title is-5 has-text-centered">Macro Data</h4>
-                <p class="has-text-centered"><strong>us_retail_sales.xlsx</strong><br>(U.S. Census Bureau)</p>
-                <hr>
-                <p>30 years of sales data for the entire U.S. retail market. It illustrates the overall growth and structural shifts within the market.</p>
-            </div>
-          </div>
-          <div class="column is-6">
-            <div class="box">
-                <h4 class="title is-5 has-text-centered">Micro Data</h4>
-                <p class="has-text-centered"><strong>shopping_trends.csv</strong><br>(Kaggle Consumer Data)</p>
-                <hr>
-                <p>Data from 3,900 actual online shoppers. It reveals specific behavioral patterns, including the consumers' age, gender, and purchased items.</p>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CHART 1 -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">1. The Scale of Growth</h2>
-    
-    <!-- Chart 1 -->
-    <div class="content">
-      <h4 class="title is-4">Chart 1: Growth of US E-commerce Market (1993–2023)</h4>
-      <figure class="image has-text-centered">
-        <img src="./static/images/chart1_growth.png" alt="Growth of US E-commerce Market" class="chart-image img-small75" onerror="this.src='https://placehold.co/800x600?text=Chart+1+Placeholder'">
-        <figcaption>Figure 1. The trend of total annual sales in the e-commerce market from 1993 to 2023.</figcaption>
-      </figure>
-      
-      <div class="content has-text-justified">
-        <p class="analysis-text">
-          <strong>Data Source:</strong> us_retail_sales.xlsx ("Electronic shopping and mail-order houses")<br>
-          We analyzed how the e-commerce market has evolved over the past 30 years using U.S. Census data.
-        </p>
-        <div class="message-box">
-          <span class="message-title">💡 Key Message</span>
-          "The U.S. e-commerce market has recorded <strong>unstoppable Exponential Growth</strong> over the last 30 years. This is not merely a trend, but the strongest macro evidence that the central axis of consumption has completely shifted to digital."
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CHART 2 -->
-<section class="section" style="background-color: #fcfcfc;">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">2. Who are the Shoppers?</h2>
-
-    <div class="columns">
-        <!-- Chart 2a -->
-        <div class="column is-7">
-            <h4 class="title is-4">Chart 2a: Age Distribution of Online Shoppers</h4>
-            <figure class="image">
-                <img src="./static/images/chart2_age_gender.png" alt="Age Distribution" class="chart-image" onerror="this.src='https://placehold.co/800x600?text=Chart+2a+Placeholder'">
-            </figure>
-            <div class="message-box">
-                <span class="message-title">💡 Key Message</span>
-                "Online shopping is not the exclusive domain of a specific age group. It is evenly distributed from consumers in their 20s to their 60s. The chart visually compares male and female participation within each age bracket."
-            </div>
-        </div>
-        <!-- Chart 2b -->
-        <div class="column is-5">
-            <h4 class="title is-4">Chart 2b: Overall Gender Ratio</h4>
-            <figure class="image">
-                <img src="./static/images/chart2_gender_pie.png" alt="Gender Ratio" class="chart-image" onerror="this.src='https://placehold.co/600x600?text=Chart+2b+Placeholder'">
-            </figure>
-            <div class="message-box">
-                <span class="message-title">💡 Key Message</span>
-                "This chart highlights the gender composition of the entire market. It transparently shows that more male consumer data was collected in this dataset, providing a necessary baseline for target analysis."
-            </div>
-        </div>
-    </div>
-  </div>
-</section>
-
-<!-- CHART 3, 4, 5 -->
-<section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">3. Consumer Behavior Analysis</h2>
-      
-      <!-- Chart 3 -->
-      <div class="content mb-6">
-        <h4 class="title is-4">Chart 3: Most Popular Online Categories</h4>
-        <figure class="image has-text-centered">
-          <img src="./static/images/chart3_pie_categories.png" alt="Popular Categories" class="chart-image img-small75" onerror="this.src='https://placehold.co/800x600?text=Chart+3+Placeholder'">
-        </figure>
+        <!-- Introduction Text -->
         <div class="content has-text-justified">
-          <p>We analyzed the sales proportions of clothing, accessories, footwear, and outerwear to identify the most popular items.</p>
-          <div class="message-box">
-            <span class="message-title">💡 Key Message</span>
-            "<strong>44.5% of online consumption is 'Clothing'.</strong> When combined with accessories, fashion-related items account for three-quarters of the market. The core engine driving the e-commerce revolution is, definitively, <strong>'Fashion Clothing Consumption'.</strong>"
-          </div>
+          <p>
+            The fashion industry is undergoing a dramatic shift, widely termed the “E-commerce Revolution.” While the traditional U.S. clothing retail market has grown steadily since 1992, online retail has surged, redefining the structure of fashion commerce. This section quantifies this transformation by analyzing long-term market data.
+          </p>
         </div>
-      </div>
 
-      <div class="columns">
-          <!-- Chart 4 -->
-          <div class="column">
-            <h4 class="title is-4">Chart 4: Age vs. Purchase Amount</h4>
-            <figure class="image">
-                <img src="./static/images/chart4_age_spending.png" alt="Age vs Spending" class="chart-image" onerror="this.src='https://placehold.co/800x600?text=Chart+4+Placeholder'">
-            </figure>
-            <div class="message-box">
-                <span class="message-title">💡 Key Message</span>
-                "Contrary to common belief, there is almost no correlation between age and spending amount (correlation coefficient near 0). This suggests that middle-aged consumers, not just the younger generation, possess significant purchasing power in the online fashion market."
-            </div>
-          </div>
-          <!-- Chart 5 -->
-          <div class="column">
-            <h4 class="title is-4">Chart 5: Customer Satisfaction</h4>
-            <figure class="image">
-                <img src="./static/images/chart5_satisfaction.png" alt="Customer Satisfaction" class="chart-image" onerror="this.src='https://placehold.co/800x600?text=Chart+5+Placeholder'">
-            </figure>
-            <div class="message-box">
-                <span class="message-title">💡 Key Message</span>
-                "Ratings across all categories are consistently distributed around the average (3.75). This implies that the quality of the online shopping experience has leveled up across the board, without dissatisfaction clustering in specific items."
-            </div>
-          </div>
+        <!-- Figure 1: Total Growth -->
+        <div class="has-text-centered">
+          <img src="./static/images/figure1_growth.png" alt="Long-Term Growth of US E-commerce" style="width: 80%; margin-bottom: 10px;">
+          <p class="is-size-6 has-text-grey">
+            <strong>Figure 1. Growth of US E-commerce Market (1993–2023).</strong><br>
+            A historical view of the market's exponential expansion.
+          </p>
+        </div>
+        <br>
+
+        <!-- Figure 6: Comparison -->
+        <h3 class="title is-4">The Great Divergence: Online vs. Offline</h3>
+        <div class="content has-text-justified">
+          <p>
+            To put this growth into perspective, <strong>Figure 6</strong> compares E-commerce directly against traditional clothing retail using the same U.S. Census dataset. The divergence is dramatic. Traditional clothing retail (black line) has grown slowly, reflecting market saturation and maturity. In stark contrast, the e-commerce sector (blue line) has surged, eventually overtaking traditional retail in total sales volume. This gap visualizes the "retail apocalypse" for physical stores and the simultaneous digital renaissance.
+          </p>
+        </div>
+        <div class="has-text-centered">
+          <img src="./static/images/figure6_ecommerce_revolution.png" alt="E-commerce Revolution" style="width: 80%; margin-bottom: 10px;">
+          <p class="is-size-6 has-text-grey">
+            <strong>Figure 6. Actual Sales Volume: E-commerce vs. Traditional (1993–2023).</strong><br>
+            The widening gap illustrates the structural shift in consumer habits.
+          </p>
+        </div>
+        <br>
+
+        <!-- Figure 7: Sector Comparison -->
+        <h3 class="title is-4">Resilience of the Clothing Sector</h3>
+        <div class="content has-text-justified">
+          <p>
+            When comparing 'Clothing' to other sectors like 'Jewelry' and 'Sporting Goods' (<strong>Figure 7</strong>), we see that clothing maintains a stable growth pattern, free from the volatile swings seen in sporting goods, reinforcing its role as a steady pillar of retail despite the digital shift.
+          </p>
+        </div>
+        <div class="has-text-centered">
+            <img src="./static/images/figure7_sector_comparison.png" alt="Sector Comparison" style="width: 80%; margin-bottom: 10px;">
+            <p class="is-size-6 has-text-grey">
+              <strong>Figure 7. Actual Sales Volume by Sector (1993–2023).</strong><br>
+              Clothing demonstrates stability compared to more volatile discretionary sectors.
+            </p>
+        </div>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-<!-- CHART 6, 7 -->
-<section class="section" style="background-color: #fafafa;">
+
+<!-- SECTION 2: DEMOGRAPHICS -->
+<section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">4. Comparative Market Analysis</h2>
-    
-    <!-- Chart 6 -->
-        <div class="content mb-6">
-      <h4 class="title is-4">Chart 6: E-commerce vs. Traditional Retail Growth</h4>
-      <figure class="image has-text-centered">
-        <img src="./static/images/chart6_ecommerce_revolution.png" alt="E-commerce vs Traditional" class="chart-image img-small75" onerror="this.src='https://placehold.co/800x600?text=Chart+6+Placeholder'">
-      </figure>
-      <div class="content has-text-justified">
-        <p>Using 1999 sales as a baseline (100), we compared the growth speed of both markets.</p>
-        <div class="message-box">
-          <span class="message-title">💡 Key Message</span>
-          "This visualizes the shock of digital transformation. While traditional retail (<strong>blue line</strong>) grew moderately, e-commerce (<strong>pink line</strong>) exploded by over 2,500%. This is the definitive graph proving the retail paradigm has completely shifted from offline to online."
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">2. Profiling the Digital Shopper</h2>
+
+        <div class="content has-text-justified">
+          <p>
+             Who is behind these trillions of dollars in spending? We moved from macro data to a micro-level dataset of 3,900 shoppers to build a profile. The most significant finding is the gender disparity.
+          </p>
         </div>
+        
+        <!-- Figure 2: Composite (Bar + Pie) Side by Side -->
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <img src="./static/images/figure2a_age_gender.png" alt="Age Distribution" style="width: 100%; margin-bottom: 10px;">
+            <p class="is-size-6 has-text-grey">
+              <strong>Figure 2a. Age Distribution by Gender.</strong>
+            </p>
+          </div>
+          <div class="column has-text-centered">
+             <img src="./static/images/figure2b_gender_pie.png" alt="Gender Ratio" style="width: 100%; margin-bottom: 10px;">
+             <p class="is-size-6 has-text-grey">
+              <strong>Figure 2b. Overall Gender Ratio.</strong>
+            </p>
+          </div>
+        </div>
+        
+        <div class="content has-text-justified">
+          <p>
+            As shown in <strong>Figure 2a</strong> and <strong>2b</strong>, the market is not dominated by a single age group; rather, it is active across all generations from Gen Z (20s) to Boomers (60s). However, the gender gap is persistent. Across almost every age bracket, there is a distinct difference in participation, identifying the market as structurally diverse in age but distinct in gender composition.
+          </p>
+        </div>
+
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Chart 7 -->
-    <div class="content">
-      <h4 class="title is-4">Chart 7: Growth Comparison (Clothing vs. Others)</h4>
-      <figure class="image has-text-centered">
-        <img src="./static/images/chart7_sector_comparison.png" alt="Sector Comparison" class="chart-image img-small75" onerror="this.src='https://placehold.co/800x600?text=Chart+7+Placeholder'">
-      </figure>
-      <div class="content has-text-justified">
-        <p>Compared to 1993, we analyzed how stably the clothing industry has grown compared to other sectors (jewelry, sporting goods).</p>
-        <div class="message-box">
-            <span class="message-title">💡 Key Message</span>
-            "Unlike other markets showing sharp fluctuations, the clothing market (dark grey) depicts a very stable and steady upward trend. It demonstrates that clothing is a <strong>'Stable Pillar'</strong> of the retail industry, unshaken by economic fluctuations."
+
+<!-- SECTION 3: BEHAVIOR -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">3. Purchasing Behavior & Patterns</h2>
+
+        <!-- Figure 3: Categories -->
+        <div class="content has-text-justified">
+          <p>
+            <strong>What are they buying?</strong> The data in <strong>Figure 3</strong> is unequivocal: Fashion dominates. 'Clothing' alone accounts for 44.5% of all transactions. When combined with 'Accessories' and 'Footwear', fashion-related items constitute over 90% of the dataset. This validates the hypothesis that the e-commerce boom is intrinsically linked to the fashion industry.
+          </p>
+        </div>
+        <div class="has-text-centered">
+          <img src="./static/images/figure3_pie_categories.png" alt="Popular Categories" style="width: 60%; margin-bottom: 10px;">
+          <p class="is-size-6 has-text-grey">
+            <strong>Figure 3. Most Popular Online Categories.</strong><br>
+            The dominance of Clothing (44.5%) highlights the fashion-centric nature of e-commerce.
+          </p>
+        </div>
+        <br>
+
+        <!-- Strategic Insights: Spending & Seasonality -->
+        <h3 class="title is-4">Strategic Insights: Spending Power & Timing</h3>
+        <div class="content has-text-justified">
+          <p>
+            We uncovered two critical insights for marketing strategy. First, <strong>Figure 4</strong> challenges the assumption that younger generations spend more online. The scatter plot reveals a flat trendline (Pearson r ≈ 0), indicating that purchasing power is <strong>age-independent</strong>. A 60-year-old shopper is just as valuable as a 20-year-old one.
+          </p>
+          <p>
+            Second, <strong>Figure 8</strong> visualizes the "heartbeat" of the industry. The heatmap shows a recurring, intense spike in sales every <strong>December</strong> (dark blue cells). This seasonality is consistent year over year, emphasizing that Q4 holiday strategies are the single most critical factor for annual revenue.
+          </p>
+        </div>
+        
+        <div class="columns is-centered">
+           <div class="column has-text-centered">
+            <img src="./static/images/figure4_age_spending.png" alt="Age vs Spending" style="width: 100%; margin-bottom: 10px;">
+            <p class="is-size-6 has-text-grey">
+                <strong>Figure 4. Age vs. Purchase Amount.</strong>
+            </p>
+          </div>
+          <div class="column has-text-centered">
+            <img src="./static/images/figure8_heatmap_seasonality.png" alt="Seasonality" style="width: 100%; margin-bottom: 10px;">
+            <p class="is-size-6 has-text-grey">
+                <strong>Figure 8. Monthly Sales Seasonality.</strong>
+            </p>
+          </div>
+        </div>
+        <br>
+
+        <!-- Figure 5: Satisfaction -->
+        <h3 class="title is-4">Customer Satisfaction</h3>
+        <div class="content has-text-justified">
+          <p>
+            Finally, is the customer happy? <strong>Figure 5</strong> shows the distribution of review ratings across categories. The median rating is consistently high (around 3.7 - 3.8) across all product types. This uniformity suggests that the online fashion market has reached a level of maturity where product quality and service are reliable, regardless of whether the customer is buying a dress or a handbag.
+          </p>
+        </div>
+        <div class="has-text-centered">
+           <img src="./static/images/figure5_satisfaction.png" alt="Satisfaction" style="width: 80%; margin-bottom: 10px;">
+           <p class="is-size-6 has-text-grey"><strong>Figure 5. Customer Satisfaction by Category.</strong></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- OUTRO & CONCLUSION -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Conclusion</h2>
+        <div class="content has-text-justified">
+          <p>
+            This project provides a data-driven confirmation of the "E-commerce Revolution." The narrative is clear and compelling: The U.S. retail landscape has fundamentally shifted from physical to digital, a transformation quantified by the massive growth in e-commerce sales (Fig 1 & 6).
+          </p>
+          <p>
+            This growth is not abstract; it is driven by a specific, powerful demographic—female consumers who are primarily purchasing clothing (Fig 2 & 3). Yet, the market is inclusive, with significant spending power found across all age groups (Fig 4). For retailers, the takeaway is strategic: maintain a broad age appeal, focus on the female demographic, and optimize operations for the critical December surge (Fig 8). These findings portray a market that is not only booming but also strategically aligned with evolving consumer demands.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CHART 8 -->
-<section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">5. Seasonality of Sales</h2>
-      
-      <div class="content">
-        <h4 class="title is-4">Chart 8: Monthly Sales Seasonality</h4>
-        <figure class="image has-text-centered">
-          <img src="./static/images/chart8_heatmap_seasonality.png" alt="Monthly Seasonality" class="chart-image" style="width: 100%;" onerror="this.src='https://placehold.co/1000x500?text=Chart+8+Placeholder'">
-        </figure>
-        <div class="content has-text-justified">
-          <p>A heatmap illustrating the monthly sales intensity of "Women's clothing stores" from 2004 to 2024.</p>
-          <div class="message-box">
-            <span class="message-title">💡 Key Message</span>
-            "This chart reveals the <strong>'Timing'</strong> of consumption. A distinct pattern of darkening colors every <strong>December</strong> is visible. This proves via data that the year-end holiday season is the 'Golden Time' for fashion sales."
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 <!-- REFERENCES -->
-<section class="section">
-  <div class="container is-max-desktop">
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">References and Data Sources</h2>
     <div class="content has-text-justified">
       <ul>
-        <li>
-            <strong>U.S. Census Bureau</strong>: Monthly Retail Trade and Food Services Survey, 1992-2024. (Data retrieved from <code>us_retail_sales.xlsx</code>)
-        </li>
-        <li>
-            <strong>Kaggle</strong>: “Customer Shopping Trends Dataset.” (Data retrieved from <code>shopping_trends.csv</code>)
-        </li>
+        <li><strong>U.S. Census Bureau</strong>: Monthly Retail Trade and Food Services Survey, 1992-2024. Used for macro-level trend analysis. (Data retrieved from <a href="https://www.census.gov/retail/sales.html">census.gov</a>)</li>
+        <li><strong>Kaggle</strong>: Customer Shopping Trends Dataset. Used for micro-level consumer profiling. (Data retrieved from <a href="https://www.kaggle.com/datasets/iamsouravbanerjee/customer-shopping-trends-dataset">kaggle.com</a>)</li>
       </ul>
     </div>
   </div>
 </section>
 
+
 <!-- FOOTER -->
-<footer class='footer footer-compact'>
+<footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <p>
@@ -405,7 +321,7 @@
         href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
       </p>
       <p>
-        Template design is based on the example site available at <a href="https://utkuozbulak.github.io/cds_301_template_website/" target="_blank" rel="noopener">CDS 301 Template Website</a>, which itself uses a layout from the <a href="https://github.com/nerfies/nerfies.github.io" target="_blank" rel="noopener">Nerfies project site</a>.
+        Template design is based on the example site available at <a href="https://github.com/bulak/cds301-template-web">CDS 301 Template Website</a>, which itself uses a layout from the <a href="https://nerfies.github.io/">Nerfies project site</a>.
       </p>
     </div>
   </div>
