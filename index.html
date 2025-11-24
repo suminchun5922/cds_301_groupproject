@@ -18,9 +18,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* 1. 기본 설정 & 타이포그래피 */
+    /* 1. Basic Setup & Typography */
     html {
-      scroll-behavior: smooth; /* 부드러운 스크롤 */
+      scroll-behavior: smooth;
     }
 
     body {
@@ -32,11 +32,11 @@
     /* HERO SECTION WITH BACKGROUND IMAGE */
     .hero {
         background-color: #f5f5f5;
-        position: relative; /* 가상 요소를 위한 위치 기준 */
-        overflow: hidden; /* 이미지가 넘치지 않게 */
+        position: relative;
+        overflow: hidden;
     }
 
-    /* 배경 이미지 설정 (가상 요소 활용) */
+    /* Background Image Setup using Pseudo-element */
     .hero::before {
         content: "";
         position: absolute;
@@ -44,13 +44,13 @@
         left: 0;
         width: 100%;
         height: 100%;
-        /* 업로드된 이미지 경로 설정 */
-        background-image: url('./static/images/online-shopping-ecommerce-ss-1920_1.jpg'); 
-        background-size: cover; /* 이미지를 꽉 채우게 */
-        background-position: center; /* 중앙 정렬 */
-        opacity: 0.2; /* 투명도 조절 (0.1 ~ 0.3 추천) */
-        z-index: -1; /* 텍스트 뒤로 배치 */
-        filter: grayscale(30%); /* 선택사항: 흑백 톤을 살짝 섞어 차분하게 */
+        /* Updated Image Path */
+        background-image: url('./static/images/online-shopping-ecommerce-ss-1920_1.png'); 
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2; /* Transparency */
+        z-index: -1;
+        filter: grayscale(30%);
     }
 
     .publication-title {
@@ -58,7 +58,7 @@
       font-weight: 700;
       margin-bottom: 1.5rem !important;
       color: #363636;
-      letter-spacing: -0.5px; /* 자간 조정 */
+      letter-spacing: -0.5px;
     }
 
     .publication-authors {
@@ -73,18 +73,18 @@
     }
 
     .section {
-      padding: 4rem 1.5rem; /* 여백 조금 더 줌 */
+      padding: 4rem 1.5rem;
     }
 
-    /* 제목 스타일 강화 */
+    /* Enhanced Title Styles */
     .title.is-3 {
       margin-top: 2rem;
       margin-bottom: 2rem;
       font-family: 'Google Sans', sans-serif;
       color: #209cee; /* Point Color */
-      border-bottom: 3px solid #f1f1f1; /* 밑줄 두께 증가 */
+      border-bottom: 3px solid #f1f1f1;
       padding-bottom: 15px;
-      display: inline-block; /* 밑줄 길이를 텍스트에 맞춤 */
+      display: inline-block;
     }
     
     .title.is-4 {
@@ -95,29 +95,29 @@
     }
 
     .content {
-      font-size: 1.15rem; /* 글자 크기 약간 키움 */
-      line-height: 1.8; /* 줄 간격 넓힘 (가독성) */
+      font-size: 1.15rem;
+      line-height: 1.8;
     }
 
-    /* 2. 인터랙션 요소 (Interaction) - 효과 강화됨! */
+    /* 2. Interaction Elements */
     
     /* Key Message Box Styling + Strong Hover Effect */
     .message-box {
-      display: block; /* 블록 요소로 확실히 지정 */
+      display: block;
       background-color: #f0f8ff; /* Light Blue Background */
       border-left: 5px solid #3273dc; /* Blue Point Line */
       padding: 1.5rem;
       margin: 2rem 0;
-      border-radius: 0 12px 12px 0; /* 둥근 모서리 */
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* 기본 그림자 */
-      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease; /* 부드러운 애니메이션 */
-      cursor: default; /* 마우스 커서 */
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+      cursor: default;
     }
 
     .message-box:hover {
-        transform: translateY(-5px); /* 위로 5px 이동 (확실하게) */
-        box-shadow: 0 12px 24px rgba(50, 115, 220, 0.15); /* 진하고 넓은 그림자 */
-        background-color: #e6f3ff; /* 배경색도 살짝 진하게 */
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(50, 115, 220, 0.15);
+        background-color: #e6f3ff;
     }
 
     .message-title {
@@ -135,17 +135,17 @@
     }
 
     .chart-image {
-      display: inline-block; /* transform 적용을 위해 필수 */
+      display: inline-block;
       border: 1px solid #eee;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      border-radius: 12px; /* 더 둥글게 */
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; /* 튕기는 듯한 효과 */
+      border-radius: 12px;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     }
 
     .chart-image:hover {
-        transform: scale(1.03); /* 3% 확대 (확실한 줌인) */
-        box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* 입체적인 그림자 */
-        z-index: 10; /* 겹칠 경우 위로 올라오게 */
+        transform: scale(1.03);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        z-index: 10;
     }
     
     /* Pie Chart Sizing Fix */
@@ -178,7 +178,7 @@
         background-color: #fafafa;
     }
 
-    /* 3. 네비게이션 바 스타일 */
+    /* 3. Navbar Styles */
     .navbar {
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
@@ -187,7 +187,7 @@
         transition: color 0.3s;
     }
     .navbar-item:hover {
-        color: #3273dc !important; /* 메뉴 호버 시 색상 변경 */
+        color: #3273dc !important;
     }
   </style>
 
@@ -220,7 +220,7 @@
 </nav>
 
 <!-- HERO SECTION WITH BACKGROUND IMAGE -->
-<section class="hero is-medium" style="margin-top: 3rem;"> <!-- 네비게이션 바 공간 확보 -->
+<section class="hero is-medium" style="margin-top: 3rem;">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -239,8 +239,6 @@
             <span class="author-block"><sup>1</sup>George Mason University Korea</span>
           </div>
           
-          <!-- (이전 이미지 태그 제거됨) -->
-
         </div>
       </div>
     </div>
@@ -272,7 +270,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">1. Market Dynamics: The Scale of Disruption</h2>
+        <h2 class="title is-3">1. <span class="icon"><i class="fas fa-chart-line"></i></span> Market Dynamics: The Scale of Disruption</h2>
 
         <!-- Introduction Text -->
         <div class="content has-text-justified">
@@ -322,7 +320,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">2. Profiling the Digital Shopper</h2>
+        <h2 class="title is-3">2. <span class="icon"><i class="fas fa-users"></i></span> Profiling the Digital Shopper</h2>
 
         <div class="content has-text-justified">
           <p>
@@ -367,7 +365,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">3. Purchasing Behavior & Patterns</h2>
+        <h2 class="title is-3">3. <span class="icon"><i class="fas fa-shopping-bag"></i></span> Purchasing Behavior & Patterns</h2>
 
         <!-- Figure 3: Categories -->
         <div class="content has-text-justified">
@@ -449,7 +447,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Conclusion</h2>
+        <h2 class="title is-3">🎯 Conclusion</h2>
         <div class="content has-text-justified">
           <p>
             This project provides a data-driven confirmation of the "E-commerce Revolution." The narrative is clear and compelling: The U.S. retail landscape has fundamentally shifted from physical to digital, a transformation quantified by the massive growth in e-commerce sales (Fig 1 & 6). This shift is not a temporary trend, but a permanent restructuring of the market.
@@ -470,7 +468,7 @@
 <!-- REFERENCES -->
 <section class="section" id="BibTeX" style="background-color: #fafafa;">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3 has-text-centered">References and Data Sources</h2>
+    <h2 class="title is-3 has-text-centered">📚 References and Data Sources</h2>
     <div class="content has-text-justified">
       <ul>
         <li><strong>U.S. Census Bureau</strong>: Monthly Retail Trade and Food Services Survey, 1992-2024. Used for macro-level trend analysis. (Data retrieved from <a href="https://www.census.gov/retail/sales.html" target="_blank">census.gov</a>)</li>
@@ -500,7 +498,7 @@
 </footer>
 
 <script>
-  // 모바일 메뉴용 스크립트 (Navbar Hamburger)
+  // Mobile Menu Script (Navbar Hamburger)
   document.addEventListener('DOMContentLoaded', () => {
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
     if ($navbarBurgers.length > 0) {
