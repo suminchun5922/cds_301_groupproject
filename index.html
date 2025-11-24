@@ -18,6 +18,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    /* 1. 기본 설정 & 타이포그래피 */
+    html {
+      scroll-behavior: smooth; /* 부드러운 스크롤 */
+    }
+
     body {
       font-family: 'Noto Sans', sans-serif;
       background-color: #fdfdfd;
@@ -33,11 +38,13 @@
       font-weight: 700;
       margin-bottom: 1.5rem !important;
       color: #363636;
+      letter-spacing: -0.5px; /* 자간 조정 */
     }
 
     .publication-authors {
       font-family: 'Google Sans', sans-serif;
       color: #4a4a4a;
+      font-size: 1.2rem;
     }
 
     .container.is-max-desktop {
@@ -46,81 +53,103 @@
     }
 
     .section {
-      padding: 3rem 1.5rem;
+      padding: 4rem 1.5rem; /* 여백 조금 더 줌 */
     }
 
+    /* 제목 스타일 강화 */
     .title.is-3 {
       margin-top: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       font-family: 'Google Sans', sans-serif;
       color: #209cee; /* Point Color */
-      border-bottom: 2px solid #f1f1f1;
-      padding-bottom: 10px;
+      border-bottom: 3px solid #f1f1f1; /* 밑줄 두께 증가 */
+      padding-bottom: 15px;
+      display: inline-block; /* 밑줄 길이를 텍스트에 맞춤 */
     }
     
     .title.is-4 {
         color: #363636;
-        margin-top: 1.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
     }
 
     .content {
-      font-size: 1.1rem;
-      line-height: 1.7;
+      font-size: 1.15rem; /* 글자 크기 약간 키움 */
+      line-height: 1.8; /* 줄 간격 넓힘 (가독성) */
     }
 
-    /* Key Message Box Styling */
+    /* 2. 인터랙션 요소 (Interaction) - 효과 강화됨! */
+    
+    /* Key Message Box Styling + Strong Hover Effect */
     .message-box {
+      display: block; /* 블록 요소로 확실히 지정 */
       background-color: #f0f8ff; /* Light Blue Background */
       border-left: 5px solid #3273dc; /* Blue Point Line */
-      padding: 1.25rem;
-      margin: 1.5rem 0;
-      border-radius: 0 8px 8px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 12px 12px 0; /* 둥근 모서리 */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* 기본 그림자 */
+      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease; /* 부드러운 애니메이션 */
+      cursor: default; /* 마우스 커서 */
+    }
+
+    .message-box:hover {
+        transform: translateY(-5px); /* 위로 5px 이동 (확실하게) */
+        box-shadow: 0 12px 24px rgba(50, 115, 220, 0.15); /* 진하고 넓은 그림자 */
+        background-color: #e6f3ff; /* 배경색도 살짝 진하게 */
     }
 
     .message-title {
-        font-weight: bold;
+        font-weight: 800;
         color: #3273dc;
         display: block;
         margin-bottom: 0.5rem;
-        font-size: 1.15rem;
+        font-size: 1.2rem;
     }
 
-    /* Image Styling */
+    /* Image Styling + Zoom Hover Effect */
     .chart-container {
-        margin: 2rem 0;
+        margin: 2.5rem 0;
         text-align: center;
     }
 
     .chart-image {
+      display: inline-block; /* transform 적용을 위해 필수 */
       border: 1px solid #eee;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      transition: transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border-radius: 12px; /* 더 둥글게 */
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; /* 튕기는 듯한 효과 */
+    }
+
+    .chart-image:hover {
+        transform: scale(1.03); /* 3% 확대 (확실한 줌인) */
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* 입체적인 그림자 */
+        z-index: 10; /* 겹칠 경우 위로 올라오게 */
     }
     
-    /* Pie Chart Sizing Fix (For Figure 2b & 3) */
+    /* Pie Chart Sizing Fix */
     .pie-chart-img {
-        max-width: 60%; 
+        max-width: 65%; 
         height: auto;
         margin: 0 auto;
         display: block;
     }
     
     .img-main {
-        width: 85%;
+        width: 90%;
         margin: 0 auto;
     }
 
     figcaption {
-      margin-top: 0.8rem;
+      margin-top: 1rem;
       font-style: italic;
       color: #7f8c8d;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
 
     .footer {
-        padding: 3rem 1.5rem;
+        padding: 4rem 1.5rem;
         background-color: #f5f5f5;
     }
     
@@ -128,14 +157,50 @@
     .section-bg-alt {
         background-color: #fafafa;
     }
+
+    /* 3. 네비게이션 바 스타일 */
+    .navbar {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .navbar-item {
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    .navbar-item:hover {
+        color: #3273dc !important; /* 메뉴 호버 시 색상 변경 */
+    }
   </style>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 </head>
 <body>
 
+<!-- NAVIGATION BAR -->
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <strong>🛍️ E-commerce Revolution</strong>
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="#abstract">Introduction</a>
+      <a class="navbar-item" href="#macro">Macro Trends</a>
+      <a class="navbar-item" href="#micro">Demographics</a>
+      <a class="navbar-item" href="#behavior">Behavior</a>
+      <a class="navbar-item" href="#conclusion">Conclusion</a>
+    </div>
+  </div>
+</nav>
+
 <!-- HERO SECTION -->
-<section class="hero">
+<section class="hero is-medium" style="margin-top: 3rem;"> <!-- 네비게이션 바 공간 확보 -->
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -143,14 +208,14 @@
           <h1 class="title is-1 publication-title">The E-commerce Revolution:<br>Who is the Online Fashion Consumer?</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Sumin Chun<sup>1</sup> and
+              <span class="icon"><i class="fas fa-user"></i></span> Sumin Chun<sup>1</sup> &nbsp;&nbsp;
             </span>
             <span class="author-block">
-              Janghee Cho<sup>1</sup>
+              <span class="icon"><i class="fas fa-user"></i></span> Janghee Cho<sup>1</sup>
             </span>
           </div>
 
-          <div class="is-size-5 publication-authors">
+          <div class="is-size-5 publication-authors" style="margin-top: 10px;">
             <span class="author-block"><sup>1</sup>George Mason University Korea</span>
           </div>
         </div>
@@ -160,7 +225,7 @@
 </section>
 
 <!-- ABSTRACT -->
-<section class="section">
+<section class="section" id="abstract">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -180,7 +245,7 @@
 
 
 <!-- SECTION 1: MACRO TRENDS -->
-<section class="section section-bg-alt">
+<section class="section section-bg-alt" id="macro">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -230,7 +295,7 @@
 
 
 <!-- SECTION 2: DEMOGRAPHICS -->
-<section class="section">
+<section class="section" id="micro">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -275,7 +340,7 @@
 
 
 <!-- SECTION 3: BEHAVIOR -->
-<section class="section section-bg-alt">
+<section class="section section-bg-alt" id="behavior">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -357,17 +422,20 @@
 
 
 <!-- OUTRO & CONCLUSION -->
-<section class="section">
+<section class="section" id="conclusion">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Conclusion</h2>
         <div class="content has-text-justified">
           <p>
-            This project provides a data-driven confirmation of the "E-commerce Revolution." The narrative is clear and compelling: The U.S. retail landscape has fundamentally shifted from physical to digital, a transformation quantified by the massive growth in e-commerce sales (Fig 1 & 6).
+            This project provides a data-driven confirmation of the "E-commerce Revolution." The narrative is clear and compelling: The U.S. retail landscape has fundamentally shifted from physical to digital, a transformation quantified by the massive growth in e-commerce sales (Fig 1 & 6). This shift is not a temporary trend, but a permanent restructuring of the market.
           </p>
           <p>
-            This growth is driven by fashion demand (Fig 3) and supported by consumers across all age groups (Fig 2 & 4), anchored by the critical December surge (Fig 8). These findings portray a market that is not only booming but also strategically aligned with evolving consumer demands.
+            Beyond the sheer scale of growth, our analysis reveals the strategic keys to success in this new era. First, <strong>Fashion is the Engine</strong>: Clothing drives nearly half of all online transactions. Second, <strong>Demographics are Irrelevant</strong>: Age is no longer a barrier to entry or spending power; the digital marketplace is truly inclusive. Finally, <strong>Timing is Everything</strong>: The consistent December surge underscores the critical nature of seasonal planning.
+          </p>
+          <p>
+            Ultimately, these findings portray a market that is not only booming but also strategically mature. For retailers and marketers, the message is simple: Embrace the digital shift, cater to a broad age demographic, and optimize for the holiday season to capture the full potential of this ongoing revolution.
           </p>
         </div>
       </div>
@@ -407,6 +475,23 @@
     </div>
   </div>
 </footer>
+
+<script>
+  // 모바일 메뉴용 스크립트 (Navbar Hamburger)
+  document.addEventListener('DOMContentLoaded', () => {
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    if ($navbarBurgers.length > 0) {
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
