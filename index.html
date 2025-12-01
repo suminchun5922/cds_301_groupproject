@@ -159,7 +159,7 @@
     
     /* Pie Chart Sizing - Reduced size */
     .pie-chart-img {
-        max-width: 60%; /* Reduced from 80% */
+        max-width: 50%; /* Reduced to 50% for Figure 3 */
         height: auto;
         margin: 0 auto;
         display: block;
@@ -195,10 +195,16 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        justify-content: space-between; /* Distribute space */
     }
     
+    .flex-chart-column .chart-container {
+        flex: 0 0 auto; /* Don't grow chart container */
+    }
+
     .flex-chart-column .message-box {
-        flex-grow: 1;
+        flex-grow: 1; /* Message box takes remaining space */
+        margin-top: 1rem; /* Adjust margin */
     }
 
 
@@ -469,7 +475,7 @@
         </div>
 
         <div class="chart-container has-text-centered">
-          <img src="./static/images/figure3_pie_categories.png" alt="Popular Categories" class="chart-image pie-chart-img" style="max-width: 60%;"> <!-- Reduced size -->
+          <img src="./static/images/figure3_pie_categories.png" alt="Popular Categories" class="chart-image pie-chart-img" style="max-width: 50%;"> <!-- Further Reduced size -->
           <figcaption>
             <strong>Figure 3. Most Popular Online Categories.</strong>
           </figcaption>
@@ -490,8 +496,8 @@
           </p>
         </div>
         
-        <!-- Aligned Figures 4 & 8 with Insights -->
-        <div class="columns is-centered">
+        <!-- Aligned Figures 4 & 8 with Insights using Flexbox -->
+        <div class="columns is-centered is-multiline">
            <!-- Figure 4 Column -->
            <div class="column is-6 flex-chart-column">
              <div class="chart-container has-text-centered">
@@ -509,7 +515,7 @@
           <!-- Figure 8 Column -->
           <div class="column is-6 flex-chart-column">
             <div class="chart-container has-text-centered">
-                <img src="./static/images/figure8_heatmap_seasonality.png" alt="Seasonality" class="chart-image">
+                <img src="./static/images/figure8_heatmap_seasonality.png" alt="Seasonality" class="chart-image" style="height: auto; width: 100%; object-fit: cover;"> <!-- Adjusted Image Styling -->
             </div>
             <figcaption>
                 <strong>Figure 8. Monthly Sales Seasonality.</strong>
