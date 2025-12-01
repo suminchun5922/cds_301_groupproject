@@ -26,17 +26,16 @@
     body {
       font-family: 'Noto Sans', sans-serif;
       background-color: #fdfdfd;
-      color: #2c3e50;
+      color: #4a4a4a; /* Unified Dark Gray text */
     }
     
-    /* HERO SECTION WITH BACKGROUND IMAGE */
+    /* HERO SECTION */
     .hero {
         background-color: #f5f5f5;
         position: relative;
         overflow: hidden;
     }
 
-    /* Background Image Setup using Pseudo-element */
     .hero::before {
         content: "";
         position: absolute;
@@ -44,13 +43,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        /* Hero Background Image Path */
         background-image: url('./static/images/online-shopping-ecommerce-ss-1920_1.png'); 
         background-size: cover;
         background-position: center;
-        opacity: 0.2; /* Transparency (20%) */
+        opacity: 0.15; 
         z-index: -1;
-        filter: grayscale(30%);
+        filter: grayscale(10%) sepia(20%);
     }
 
     .publication-title {
@@ -76,19 +74,19 @@
       padding: 4rem 1.5rem;
     }
 
-    /* Enhanced Title Styles */
+    /* Unified Title Styles */
     .title.is-3 {
       margin-top: 2rem;
       margin-bottom: 2rem;
       font-family: 'Google Sans', sans-serif;
-      color: #209cee; /* Point Color */
-      border-bottom: 3px solid #f1f1f1;
+      color: #4a4a4a; /* Unified Dark Gray for all titles */
+      border-bottom: 3px solid #d7ccc8; /* Unified Warm Gray Border */
       padding-bottom: 15px;
       display: inline-block;
     }
     
     .title.is-4 {
-        color: #363636;
+        color: #5d4037; /* Dark Brown for subtitles */
         margin-top: 2.5rem;
         margin-bottom: 1rem;
         font-weight: 600;
@@ -99,36 +97,38 @@
       line-height: 1.8;
     }
 
-    /* 2. Interaction Elements */
-    
-    /* Key Message Box Styling + Strong Hover Effect */
+    /* 2. Unified Insight Box Styling (Reverted to Blue Theme) */
     .message-box {
       display: block;
-      background-color: #f0f8ff; /* Light Blue Background */
-      border-left: 5px solid #3273dc; /* Blue Point Line */
       padding: 1.5rem;
       margin: 2rem 0;
-      border-radius: 0 12px 12px 0;
+      border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
-      cursor: default;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      /* Blue Theme Restored */
+      background-color: #f0f8ff; /* Light Blue Background */
+      border-left: 6px solid #3273dc; /* Blue Border */
+      text-align: left; 
     }
 
     .message-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 24px rgba(50, 115, 220, 0.15);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(50, 115, 220, 0.15); /* Blue-ish Shadow */
         background-color: #e6f3ff;
     }
 
     .message-title {
         font-weight: 800;
-        color: #3273dc;
+        color: #3273dc; /* Blue Title */
         display: block;
-        margin-bottom: 0.5rem;
-        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
-    /* Image Styling + Zoom Hover Effect */
+    /* Image Styling */
     .chart-container {
         margin: 2.5rem 0;
         text-align: center;
@@ -138,22 +138,26 @@
       display: inline-block;
       border: 1px solid #eee;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      border-radius: 12px;
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
     }
 
     .chart-image:hover {
-        transform: scale(1.03);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        z-index: 10;
+        transform: scale(1.02);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
     }
     
-    /* Pie Chart Sizing Fix */
+    /* Pie Chart Sizing */
     .pie-chart-img {
-        max-width: 65%; 
+        max-width: 80%; 
         height: auto;
         margin: 0 auto;
         display: block;
+    }
+    
+    /* Figure 5 Sizing */
+    .small-chart {
+        max-width: 60% !important; 
     }
     
     .img-main {
@@ -178,16 +182,22 @@
         background-color: #fafafa;
     }
 
-    /* 3. Navbar Styles */
+    /* Navbar Styles */
     .navbar {
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        background-color: #fff;
     }
     .navbar-item {
         font-weight: 500;
+        color: #4a4a4a;
         transition: color 0.3s;
     }
-    .navbar-item:hover {
-        color: #3273dc !important;
+    .navbar-item:hover, .navbar-link:hover {
+        color: #3273dc !important; /* Blue Hover */
+        background-color: #f0f8ff !important; /* Light Blue Hover BG */
+    }
+    .navbar-dropdown {
+        border-top: 2px solid #3273dc; /* Blue Border */
     }
   </style>
 
@@ -195,31 +205,67 @@
 </head>
 <body>
 
-<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR (Restructured) -->
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="#">
-      <strong>🛍️ E-commerce Revolution</strong>
-    </a>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <strong>🛍️ E-commerce Revolution</strong>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="#abstract">Introduction</a>
-      <a class="navbar-item" href="#macro">Macro Trends</a>
-      <a class="navbar-item" href="#micro">Demographics</a>
-      <a class="navbar-item" href="#behavior">Behavior</a>
-      <a class="navbar-item" href="#conclusion">Conclusion</a>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <!-- 1. Introduction -->
+        <a class="navbar-item" href="#abstract">
+          Introduction
+        </a>
+
+        <!-- 2. Macro Trends (Dropdown) -->
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#macro">
+            Macro Trends
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#market-growth">
+              Market Growth
+            </a>
+            <a class="navbar-item" href="#online-offline">
+              Online vs. Offline
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Micro Trends (Dropdown) -->
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#micro">
+            Micro Trends
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#demographics">
+              Demographics
+            </a>
+            <a class="navbar-item" href="#behavior">
+              Behavior & Patterns
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Conclusion -->
+        <a class="navbar-item" href="#conclusion">
+          Conclusion
+        </a>
+      </div>
     </div>
   </div>
 </nav>
 
-<!-- HERO SECTION WITH BACKGROUND IMAGE -->
+<!-- HERO SECTION -->
 <section class="hero is-medium" style="margin-top: 3rem;">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -245,7 +291,7 @@
   </div>
 </section>
 
-<!-- ABSTRACT -->
+<!-- ABSTRACT (Introduction) -->
 <section class="section" id="abstract">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -270,12 +316,14 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">1. <span class="icon"><i class="fas fa-chart-line"></i></span> Market Dynamics: The Scale of Disruption</h2>
+        <h2 class="title is-3"><span class="icon"><i class="fas fa-chart-line"></i></span> Macro Trends: The Scale of Disruption</h2>
 
-        <!-- Introduction Text -->
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" id="market-growth">
           <p>
             The fashion industry is undergoing a dramatic shift, widely termed the “E-commerce Revolution.” While the traditional U.S. clothing retail market has grown steadily since 1992, online retail has surged, redefining the structure of fashion commerce. This section quantifies this transformation by analyzing long-term market data.
+          </p>
+          <p>
+            We utilized 30 years of data from the U.S. Census Bureau to track the total sales volume of 'Electronic shopping and mail-order houses'. This dataset provides the most comprehensive view of the industry's trajectory from its infancy to its current dominance.
           </p>
         </div>
 
@@ -284,29 +332,31 @@
           <img src="./static/images/figure1_growth.png" alt="Long-Term Growth of US E-commerce" class="chart-image img-main">
           <figcaption>
             <strong>Figure 1. Growth of US E-commerce Market (1993–2023).</strong><br>
-            A historical view of the market's exponential expansion.
+            A historical view of the market's exponential expansion. The slight dip in 2023 likely reflects post-pandemic correction and inflation adjustments.
           </figcaption>
         </div>
         <br>
 
         <!-- Figure 6: Comparison -->
-        <h3 class="title is-4"><span class="icon"><i class="fas fa-exchange-alt"></i></span> The Great Divergence: Online vs. Offline</h3>
-        <div class="content has-text-justified">
-          <p>
-            To put this growth into perspective, <strong>Figure 6</strong> compares E-commerce directly against traditional clothing retail using the same U.S. Census dataset.
-          </p>
-          <div class="message-box">
-             <span class="message-title">💡 Insight: The Retail Apocalypse</span>
-             "The divergence is dramatic. Traditional clothing retail (blue line) has grown slowly, reflecting market saturation. In stark contrast, the e-commerce sector (pink line) has surged, growing by over <strong>1,200%</strong>. This gap visualizes the structural shift in consumer habits."
-          </div>
-        </div>
-        
-        <div class="chart-container has-text-centered">
-          <img src="./static/images/figure6_ecommerce_revolution.png" alt="E-commerce Revolution" class="chart-image img-main">
-          <figcaption>
-            <strong>Figure 6. Actual Sales Volume: E-commerce vs. Traditional (1999–2023).</strong><br>
-            The widening gap illustrates the structural shift in consumer habits.
-          </figcaption>
+        <div id="online-offline">
+            <h3 class="title is-4"><span class="icon"><i class="fas fa-exchange-alt"></i></span> The Great Divergence: Online vs. Offline</h3>
+            <div class="content has-text-justified">
+              <p>
+                To put this growth into perspective, <strong>Figure 6</strong> compares E-commerce directly against traditional clothing retail using the same U.S. Census dataset. We indexed sales to 1999 (Index=100) to normalize the starting point and compare pure growth rates.
+              </p>
+              <div class="message-box">
+                 <span class="message-title">💡 Insight: The Retail Apocalypse</span>
+                 <p>"The divergence is dramatic. Traditional clothing retail (blue line) has grown slowly, reflecting market saturation. In stark contrast, the e-commerce sector (pink line) has surged, growing by over <strong>1,200%</strong>. This gap visualizes the structural shift in consumer habits from brick-and-mortar to digital channels."</p>
+              </div>
+            </div>
+            
+            <div class="chart-container has-text-centered">
+              <img src="./static/images/figure6_ecommerce_revolution.png" alt="E-commerce Revolution" class="chart-image img-main">
+              <figcaption>
+                <strong>Figure 6. Actual Sales Volume: E-commerce vs. Traditional (1999–2023).</strong><br>
+                The widening gap illustrates the structural shift in consumer habits.
+              </figcaption>
+            </div>
         </div>
 
       </div>
@@ -315,33 +365,35 @@
 </section>
 
 
-<!-- SECTION 2: DEMOGRAPHICS -->
+<!-- SECTION 2: MICRO TRENDS (Demographics) -->
 <section class="section" id="micro">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">2. <span class="icon"><i class="fas fa-users"></i></span> Profiling the Digital Shopper</h2>
+        <h2 class="title is-3"><span class="icon"><i class="fas fa-users"></i></span> Micro Trends: Profiling the Digital Shopper</h2>
 
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" id="demographics">
           <p>
-              Who is behind these trillions of dollars in spending? We moved from macro data to a micro-level dataset of 3,900 shoppers to build a profile.
+              Who is behind these trillions of dollars in spending? We moved from macro data to a micro-level dataset of 3,900 shoppers from Kaggle to build a detailed profile. This analysis breaks down the consumer base by age and gender to challenge common stereotypes about online shoppers.
           </p>
         </div>
         
         <!-- Figure 2: Composite (Bar + Pie) Side by Side -->
         <div class="columns is-centered is-vcentered">
           
-          <div class="column is-7 has-text-centered">
+          <div class="column is-6 has-text-centered">
             <img src="./static/images/figure2a_age_gender.png" alt="Age Distribution" class="chart-image" style="width: 100%;">
             <figcaption>
-              <strong>Figure 2a. Age Distribution by Gender.</strong>
+              <strong>Figure 2a. Age Distribution by Gender.</strong><br>
+              Note the even distribution across age brackets.
             </figcaption>
           </div>
 
-          <div class="column is-5 has-text-centered">
+          <div class="column is-6 has-text-centered">
              <img src="./static/images/figure2b_gender_pie.png" alt="Gender Ratio" class="chart-image pie-chart-img">
              <figcaption>
-              <strong>Figure 2b. Overall Gender Ratio.</strong>
+              <strong>Figure 2b. Overall Gender Ratio.</strong><br>
+              Breakdown of the specific dataset used.
             </figcaption>
           </div>
 
@@ -350,7 +402,7 @@
         <div class="content has-text-justified">
             <div class="message-box">
                 <span class="message-title">💡 Insight: Broad Demographics</span>
-                "As shown in <strong>Figure 2a</strong>, the market is not dominated by a single age group; rather, it is active across all generations from Gen Z (20s) to Boomers (60s). <strong>Figure 2b</strong> reveals the gender breakdown of this specific dataset, providing a baseline for understanding the consumer profile."
+                <p>"As shown in <strong>Figure 2a</strong>, the market is not dominated by a single age group; rather, it is active across all generations from Gen Z (20s) to Boomers (60s). This suggests that e-commerce is no longer a niche for the tech-savvy young but a universal norm. <strong>Figure 2b</strong> reveals the gender breakdown of this specific dataset, providing a baseline context for interpreting further behavioral data."</p>
              </div>
         </div>
 
@@ -360,22 +412,22 @@
 </section>
 
 
-<!-- SECTION 3: BEHAVIOR -->
+<!-- SECTION 3: BEHAVIOR (Part of Micro Trends) -->
 <section class="section section-bg-alt" id="behavior">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">3. <span class="icon"><i class="fas fa-shopping-bag"></i></span> Purchasing Behavior & Patterns</h2>
+        <h2 class="title is-3"><span class="icon"><i class="fas fa-shopping-bag"></i></span> Purchasing Behavior & Patterns</h2>
 
         <!-- Figure 3: Categories -->
         <div class="content has-text-justified">
           <h3 class="title is-4">What are they buying?</h3>
           <p>
-             The data in <strong>Figure 3</strong> is unequivocal: Fashion dominates.
+             The data in <strong>Figure 3</strong> provides a breakdown of sales by category. This visualization helps verify if the 'e-commerce revolution' is driven by diverse goods or specific sectors.
           </p>
           <div class="message-box">
             <span class="message-title">💡 Insight: Fashion Centric</span>
-            "'Clothing' alone accounts for <strong>44.5%</strong> of all transactions. When combined with 'Accessories' and 'Footwear', fashion-related items constitute over 90% of the dataset. This validates that the e-commerce boom is intrinsically linked to the fashion industry."
+            <p>"The result is unequivocal: <strong>Fashion dominates.</strong> 'Clothing' alone accounts for <strong>44.5%</strong> of all transactions. When combined with 'Accessories' and 'Footwear', fashion-related items constitute over 90% of the dataset. This validates that the e-commerce boom is intrinsically linked to the fashion industry."</p>
           </div>
         </div>
 
@@ -391,7 +443,7 @@
         <h3 class="title is-4"><span class="icon"><i class="fas fa-lightbulb"></i></span> Strategic Insights: Spending Power & Timing</h3>
         <div class="content has-text-justified">
           <p>
-            We uncovered two critical insights for marketing strategy regarding spending power and seasonal timing.
+            We uncovered two critical insights for marketing strategy regarding spending power and seasonal timing. We correlated Age with Purchase Amount to check for spending power disparities and analyzed monthly sales data to identify peak seasons.
           </p>
         </div>
         
@@ -401,9 +453,9 @@
                 <img src="./static/images/figure4_age_spending.png" alt="Age vs Spending" class="chart-image" style="width: 100%;">
                 <figcaption><strong>Figure 4. Age vs. Purchase Amount.</strong></figcaption>
             </div>
-            <div class="message-box" style="font-size: 0.95rem;">
+            <div class="message-box">
                 <span class="message-title">💡 Insight: Age-Independent Spending</span>
-                "The scatter plot reveals a flat trendline, indicating purchasing power is <strong>age-independent</strong>. A 60-year-old shopper is just as valuable as a 20-year-old one."
+                <p>"The scatter plot reveals a flat trendline, indicating purchasing power is <strong>age-independent</strong>. A 60-year-old shopper represents as much value as a 20-year-old one. Marketing strategies should focus on 'interest' rather than 'age'."</p>
             </div>
           </div>
 
@@ -412,9 +464,9 @@
                 <img src="./static/images/figure8_heatmap_seasonality.png" alt="Seasonality" class="chart-image" style="width: 100%;">
                 <figcaption><strong>Figure 8. Monthly Sales Seasonality.</strong></figcaption>
             </div>
-            <div class="message-box" style="font-size: 0.95rem;">
+            <div class="message-box">
                 <span class="message-title">💡 Insight: The December Spike</span>
-                "The heatmap shows a recurring, intense spike every <strong>December</strong>. This proves Q4 holiday strategies are the single most critical factor for annual revenue."
+                <p>"The heatmap shows a recurring, intense spike every <strong>December</strong> (dark blue vertical bands). This proves Q4 holiday strategies are the single most critical factor for annual revenue performance."</p>
             </div>
           </div>
         </div>
@@ -428,11 +480,11 @@
             </p>
             <div class="message-box">
                 <span class="message-title">💡 Insight: Consistent Quality</span>
-                "The median rating is consistently high (around 3.8) across all product types. This uniformity suggests the online fashion market has reached a level of maturity where product quality is reliable."
+                <p>"The median rating is consistently high (around 3.8) across all product types. This uniformity suggests the online fashion market has reached a level of maturity where product quality is reliable."</p>
             </div>
         </div>
         <div class="chart-container has-text-centered">
-           <img src="./static/images/figure5_satisfaction.png" alt="Satisfaction" class="chart-image img-main">
+           <img src="./static/images/figure5_satisfaction.png" alt="Satisfaction" class="chart-image img-main small-chart">
            <figcaption><strong>Figure 5. Customer Satisfaction by Category.</strong></figcaption>
         </div>
 
