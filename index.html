@@ -110,6 +110,7 @@
       background-color: #f0f8ff; /* Light Blue Background */
       border-left: 6px solid #3273dc; /* Blue Border */
       text-align: left; 
+      height: 100%; /* For aligning heights */
     }
 
     .message-box:hover {
@@ -140,6 +141,8 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       border-radius: 8px;
       transition: transform 0.3s ease;
+      width: 100%; /* Ensure images fill their container */
+      height: auto;
     }
 
     .chart-image:hover {
@@ -147,9 +150,9 @@
         box-shadow: 0 12px 24px rgba(0,0,0,0.15);
     }
     
-    /* Pie Chart Sizing */
+    /* Pie Chart Sizing - Reduced size */
     .pie-chart-img {
-        max-width: 80%; 
+        max-width: 60%; /* Reduced from 80% */
         height: auto;
         margin: 0 auto;
         display: block;
@@ -170,6 +173,13 @@
       font-style: italic;
       color: #7f8c8d;
       font-size: 1rem;
+      text-align: center; /* Center align title only */
+    }
+    
+    /* Flexbox for equal height columns */
+    .is-flex-column {
+        display: flex;
+        flex-direction: column;
     }
 
     .footer {
@@ -318,12 +328,13 @@
       <div class="column is-full-width">
         <h2 class="title is-3"><span class="icon"><i class="fas fa-chart-line"></i></span> Macro Trends: The Scale of Disruption</h2>
 
+        <!-- Figure 1 Description -->
         <div class="content has-text-justified" id="market-growth">
           <p>
             The fashion industry is undergoing a dramatic shift, widely termed the “E-commerce Revolution.” While the traditional U.S. clothing retail market has grown steadily since 1992, online retail has surged, redefining the structure of fashion commerce. This section quantifies this transformation by analyzing long-term market data.
           </p>
           <p>
-            We utilized 30 years of data from the U.S. Census Bureau to track the total sales volume of 'Electronic shopping and mail-order houses'. This dataset provides the most comprehensive view of the industry's trajectory from its infancy to its current dominance.
+            We utilized 30 years of data from the U.S. Census Bureau to track the total sales volume of 'Electronic shopping and mail-order houses'. This dataset provides the most comprehensive view of the industry's trajectory from its infancy to its current dominance. The analysis reveals an exponential growth pattern, where the market size has multiplied significantly over the decades. The slight dip observed in 2023 likely reflects a post-pandemic market correction and the impact of economic factors such as inflation, yet the overall upward trajectory remains strong and undeniable. This suggests that the shift to digital is a structural change in the economy, not merely a temporary trend.
           </p>
         </div>
 
@@ -331,18 +342,20 @@
         <div class="chart-container has-text-centered">
           <img src="./static/images/figure1_growth.png" alt="Long-Term Growth of US E-commerce" class="chart-image img-main">
           <figcaption>
-            <strong>Figure 1. Growth of US E-commerce Market (1993–2023).</strong><br>
-            A historical view of the market's exponential expansion. The slight dip in 2023 likely reflects post-pandemic correction and inflation adjustments.
+            <strong>Figure 1. Growth of US E-commerce Market (1993–2023).</strong>
           </figcaption>
         </div>
         <br>
 
-        <!-- Figure 6: Comparison -->
+        <!-- Figure 6 Description -->
         <div id="online-offline">
             <h3 class="title is-4"><span class="icon"><i class="fas fa-exchange-alt"></i></span> The Great Divergence: Online vs. Offline</h3>
             <div class="content has-text-justified">
               <p>
-                To put this growth into perspective, <strong>Figure 6</strong> compares E-commerce directly against traditional clothing retail using the same U.S. Census dataset. We indexed sales to 1999 (Index=100) to normalize the starting point and compare pure growth rates.
+                To understand the relative impact of this growth, we compared E-commerce directly against traditional clothing retail using the same U.S. Census dataset. We indexed sales to 1999 (Index=100) to normalize the starting point and compare pure growth rates. This comparison is crucial for understanding how the retail landscape has shifted.
+              </p>
+              <p>
+                The resulting chart illustrates a "Great Divergence." While traditional retail (dark blue line) has shown modest, steady growth reflecting market saturation and maturity, the e-commerce sector (bright blue line) has experienced explosive growth, expanding by over 1,200% since 1999. This massive gap visually represents the structural shift of consumer spending from brick-and-mortar stores to digital channels. It confirms that the primary engine of retail growth has decisively moved online.
               </p>
               <div class="message-box">
                  <span class="message-title">💡 Insight: The Retail Apocalypse</span>
@@ -353,8 +366,7 @@
             <div class="chart-container has-text-centered">
               <img src="./static/images/figure6_ecommerce_revolution.png" alt="E-commerce Revolution" class="chart-image img-main">
               <figcaption>
-                <strong>Figure 6. Actual Sales Volume: E-commerce vs. Traditional (1999–2023).</strong><br>
-                The widening gap illustrates the structural shift in consumer habits.
+                <strong>Figure 6. Actual Sales Volume: E-commerce vs. Traditional (1999–2023).</strong>
               </figcaption>
             </div>
         </div>
@@ -372,9 +384,13 @@
       <div class="column is-full-width">
         <h2 class="title is-3"><span class="icon"><i class="fas fa-users"></i></span> Micro Trends: Profiling the Digital Shopper</h2>
 
+        <!-- Figure 2 Description -->
         <div class="content has-text-justified" id="demographics">
           <p>
-              Who is behind these trillions of dollars in spending? We moved from macro data to a micro-level dataset of 3,900 shoppers from Kaggle to build a detailed profile. This analysis breaks down the consumer base by age and gender to challenge common stereotypes about online shoppers.
+              Having established the macro-level growth, the next critical question is: "Who is behind these trillions of dollars in spending?" To answer this, we transitioned from macro census data to a micro-level dataset containing 3,900 individual shopper records from Kaggle. This allows us to build a detailed demographic profile of the modern online consumer.
+          </p>
+          <p>
+              We analyzed the distribution of shoppers across different age groups and genders to challenge common stereotypes. One prevalent assumption is that e-commerce is dominated by the "tech-savvy" younger generation (Gen Z). However, our data reveals a remarkably even distribution of shoppers ranging from their 20s all the way to their 60s. This indicates that online shopping has transcended generational boundaries and become a universal norm. Additionally, we examined the gender breakdown to understand the composition of this specific dataset, which serves as a baseline for interpreting subsequent behavioral patterns.
           </p>
         </div>
         
@@ -384,16 +400,14 @@
           <div class="column is-6 has-text-centered">
             <img src="./static/images/figure2a_age_gender.png" alt="Age Distribution" class="chart-image" style="width: 100%;">
             <figcaption>
-              <strong>Figure 2a. Age Distribution by Gender.</strong><br>
-              Note the even distribution across age brackets.
+              <strong>Figure 2a. Age Distribution by Gender.</strong>
             </figcaption>
           </div>
 
           <div class="column is-6 has-text-centered">
              <img src="./static/images/figure2b_gender_pie.png" alt="Gender Ratio" class="chart-image pie-chart-img">
              <figcaption>
-              <strong>Figure 2b. Overall Gender Ratio.</strong><br>
-              Breakdown of the specific dataset used.
+              <strong>Figure 2b. Overall Gender Ratio.</strong>
             </figcaption>
           </div>
 
@@ -419,11 +433,14 @@
       <div class="column is-full-width">
         <h2 class="title is-3"><span class="icon"><i class="fas fa-shopping-bag"></i></span> Purchasing Behavior & Patterns</h2>
 
-        <!-- Figure 3: Categories -->
+        <!-- Figure 3 Description -->
         <div class="content has-text-justified">
           <h3 class="title is-4">What are they buying?</h3>
           <p>
-             The data in <strong>Figure 3</strong> provides a breakdown of sales by category. This visualization helps verify if the 'e-commerce revolution' is driven by diverse goods or specific sectors.
+             Understanding <em>who</em> is shopping is important, but understanding <em>what</em> they are buying reveals the true drivers of the market. We analyzed sales data by category to verify if the 'e-commerce revolution' is a broad phenomenon or if it is driven by specific sectors. 
+          </p>
+          <p>
+             The donut chart below provides a clear breakdown of the most popular product categories purchased online. The data unequivocally shows that fashion-related items are the dominant force in e-commerce. 'Clothing' alone accounts for the largest share, representing 44.5% of all transactions. When combined with 'Accessories' and 'Footwear', these fashion categories collectively make up over 90% of the total purchases in this dataset. This strong concentration validates the premise that the e-commerce boom is intrinsically linked to the fashion industry's digital transformation.
           </p>
           <div class="message-box">
             <span class="message-title">💡 Insight: Fashion Centric</span>
@@ -432,7 +449,7 @@
         </div>
 
         <div class="chart-container has-text-centered">
-          <img src="./static/images/figure3_pie_categories.png" alt="Popular Categories" class="chart-image pie-chart-img">
+          <img src="./static/images/figure3_pie_categories.png" alt="Popular Categories" class="chart-image pie-chart-img" style="max-width: 60%;"> <!-- Reduced size -->
           <figcaption>
             <strong>Figure 3. Most Popular Online Categories.</strong>
           </figcaption>
@@ -443,27 +460,40 @@
         <h3 class="title is-4"><span class="icon"><i class="fas fa-lightbulb"></i></span> Strategic Insights: Spending Power & Timing</h3>
         <div class="content has-text-justified">
           <p>
-            We uncovered two critical insights for marketing strategy regarding spending power and seasonal timing. We correlated Age with Purchase Amount to check for spending power disparities and analyzed monthly sales data to identify peak seasons.
+            Beyond basic demographics and categories, we uncovered two critical strategic insights for marketing: purchasing power relative to age, and the impact of seasonality on sales volume.
+          </p>
+          <p>
+            First, we investigated the relationship between a shopper's age and the amount spent per transaction using a scatter plot and regression analysis. The goal was to test the hypothesis that younger consumers might spend more due to higher engagement, or older consumers might spend more due to higher income. The results, however, show a flat trendline, indicating that purchasing power is remarkably consistent across all age groups.
+          </p>
+          <p>
+            Second, we analyzed monthly sales data over several years to identify temporal patterns. The heatmap visualization reveals a striking and consistent pattern: every December, indicated by the dark vertical bands, sees a significant spike in sales. This recurring pattern highlights the critical importance of seasonality in the fashion retail sector, driven largely by holiday shopping and end-of-year promotions.
           </p>
         </div>
         
+        <!-- Aligned Figures 4 & 8 with Insights -->
         <div class="columns is-centered">
-           <div class="column is-6">
+           <!-- Figure 4 Column -->
+           <div class="column is-6 is-flex-column">
              <div class="chart-container has-text-centered">
-                <img src="./static/images/figure4_age_spending.png" alt="Age vs Spending" class="chart-image" style="width: 100%;">
-                <figcaption><strong>Figure 4. Age vs. Purchase Amount.</strong></figcaption>
-            </div>
-            <div class="message-box">
+                <img src="./static/images/figure4_age_spending.png" alt="Age vs Spending" class="chart-image">
+             </div>
+             <figcaption>
+                <strong>Figure 4. Age vs. Purchase Amount.</strong>
+             </figcaption>
+             <div class="message-box">
                 <span class="message-title">💡 Insight: Age-Independent Spending</span>
                 <p>"The scatter plot reveals a flat trendline, indicating purchasing power is <strong>age-independent</strong>. A 60-year-old shopper represents as much value as a 20-year-old one. Marketing strategies should focus on 'interest' rather than 'age'."</p>
             </div>
           </div>
 
-          <div class="column is-6">
+          <!-- Figure 8 Column -->
+          <div class="column is-6 is-flex-column">
             <div class="chart-container has-text-centered">
-                <img src="./static/images/figure8_heatmap_seasonality.png" alt="Seasonality" class="chart-image" style="width: 100%;">
-                <figcaption><strong>Figure 8. Monthly Sales Seasonality.</strong></figcaption>
+                <img src="./static/images/figure8_heatmap_seasonality.png" alt="Seasonality" class="chart-image">
             </div>
+            <figcaption>
+                <strong>Figure 8. Monthly Sales Seasonality.</strong>
+            </figcaption>
             <div class="message-box">
                 <span class="message-title">💡 Insight: The December Spike</span>
                 <p>"The heatmap shows a recurring, intense spike every <strong>December</strong> (dark blue vertical bands). This proves Q4 holiday strategies are the single most critical factor for annual revenue performance."</p>
@@ -472,11 +502,14 @@
         </div>
         <br>
 
-        <!-- Figure 5: Satisfaction -->
+        <!-- Figure 5 Description -->
         <h3 class="title is-4"><span class="icon"><i class="fas fa-smile"></i></span> Customer Satisfaction</h3>
         <div class="content has-text-justified">
             <p>
-                Finally, is the customer happy? <strong>Figure 5</strong> shows the distribution of review ratings across categories.
+                Finally, we examined the quality of the consumer experience by analyzing customer review ratings across different product categories. High satisfaction is a key indicator of market maturity and sustainability. We used box plots to visualize the distribution of ratings, looking for any categories that might be underperforming.
+            </p>
+            <p>
+                The analysis shows that the median rating for all categories—Clothing, Footwear, Accessories, and Outerwear—is consistently high, hovering around 3.8 out of 5. The interquartile ranges are also similar, suggesting a generally high level of customer satisfaction across the board. This uniformity indicates that the online fashion market has matured to a point where product quality and service are reliable and consistent, regardless of the specific category being purchased.
             </p>
             <div class="message-box">
                 <span class="message-title">💡 Insight: Consistent Quality</span>
@@ -485,7 +518,9 @@
         </div>
         <div class="chart-container has-text-centered">
            <img src="./static/images/figure5_satisfaction.png" alt="Satisfaction" class="chart-image img-main small-chart">
-           <figcaption><strong>Figure 5. Customer Satisfaction by Category.</strong></figcaption>
+           <figcaption>
+            <strong>Figure 5. Customer Satisfaction by Category.</strong>
+           </figcaption>
         </div>
 
       </div>
