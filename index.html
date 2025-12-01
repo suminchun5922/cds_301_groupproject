@@ -200,6 +200,23 @@
     
     .flex-chart-column .chart-container {
         flex: 0 0 auto; /* Don't grow chart container */
+        height: 400px; /* Fixed height for image container */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .flex-chart-column .chart-image {
+        max-height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+    
+    /* Specific adjustment for Figure 8 to match Figure 4 height */
+    #fig8-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; /* Stretch to fill */
     }
 
     .flex-chart-column .message-box {
@@ -364,16 +381,16 @@
           </p>
         </div>
 
-        <!-- Figure 1: Total Growth -->
+        <!-- Figure 1-1: Total Growth -->
         <div class="chart-container has-text-centered">
           <img src="./static/images/figure1_growth.png" alt="Long-Term Growth of US E-commerce" class="chart-image img-main">
           <figcaption>
-            <strong>Figure 1. Growth of US E-commerce Market (1993–2023).</strong>
+            <strong>Figure 1-1. Growth of US E-commerce Market (1993–2023).</strong>
           </figcaption>
         </div>
         <br>
 
-        <!-- Figure 6 Description -->
+        <!-- Figure 1-2 Description -->
         <div id="online-offline">
             <h3 class="title is-4"><span class="icon"><i class="fas fa-exchange-alt"></i></span> The Great Divergence: Online vs. Offline</h3>
             <div class="content has-text-justified">
@@ -392,7 +409,7 @@
             <div class="chart-container has-text-centered">
               <img src="./static/images/figure6_ecommerce_revolution.png" alt="E-commerce Revolution" class="chart-image img-main">
               <figcaption>
-                <strong>Figure 6. Actual Sales Volume: E-commerce vs. Traditional (1999–2023).</strong>
+                <strong>Figure 1-2. Actual Sales Volume: E-commerce vs. Traditional (1999–2023).</strong>
               </figcaption>
             </div>
         </div>
@@ -496,7 +513,7 @@
           </p>
         </div>
         
-        <!-- Aligned Figures 4 & 8 with Insights using Flexbox -->
+        <!-- Aligned Figures 4 & 5 with Insights using Flexbox -->
         <div class="columns is-centered is-multiline">
            <!-- Figure 4 Column -->
            <div class="column is-6 flex-chart-column">
@@ -512,23 +529,24 @@
             </div>
           </div>
 
-          <!-- Figure 8 Column -->
+          <!-- Figure 5 Column -->
           <div class="column is-6 flex-chart-column">
             <div class="chart-container has-text-centered">
-                <img src="./static/images/figure8_heatmap_seasonality.png" alt="Seasonality" class="chart-image" style="height: auto; width: 100%; object-fit: cover;"> <!-- Adjusted Image Styling -->
+                <!-- Apply height: 100% and object-fit: cover to stretch image -->
+                <img src="./static/images/figure8_heatmap_seasonality.png" alt="Seasonality" class="chart-image" id="fig8-img">
             </div>
             <figcaption>
-                <strong>Figure 8. Monthly Sales Seasonality.</strong>
+                <strong>Figure 5. Monthly Sales Seasonality.</strong>
             </figcaption>
             <div class="message-box">
                 <span class="message-title">💡 Insight: The December Spike</span>
-                <p>"The heatmap shows a recurring, intense spike every <strong>December</strong> (dark blue vertical bands). This proves Q4 holiday strategies are the single most critical factor for annual revenue performance."</p>
+                <p>"The heatmap shows a recurring, intense spike every <strong>December</strong>. This proves holiday strategies are the single most critical factor for annual revenue performance."</p>
             </div>
           </div>
         </div>
         <br>
 
-        <!-- Figure 5 Description -->
+        <!-- Figure 6 Description -->
         <h3 class="title is-4"><span class="icon"><i class="fas fa-smile"></i></span> Customer Satisfaction</h3>
         <div class="content has-text-justified">
             <p>
@@ -545,7 +563,7 @@
         <div class="chart-container has-text-centered">
            <img src="./static/images/figure5_satisfaction.png" alt="Satisfaction" class="chart-image img-main small-chart">
            <figcaption>
-            <strong>Figure 5. Customer Satisfaction by Category.</strong>
+            <strong>Figure 6. Customer Satisfaction by Category.</strong>
            </figcaption>
         </div>
 
