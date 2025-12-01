@@ -98,7 +98,7 @@
     .message-box {
       display: block;
       padding: 1.5rem;
-      margin: 1.0rem 0; /* Reduced margin slightly */
+      margin: 1.0rem 0; 
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -142,7 +142,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       border-radius: 8px;
       transition: transform 0.3s ease;
-      width: 100%; /* Ensure images fill their container */
+      width: 100%; 
       height: auto;
     }
 
@@ -153,7 +153,7 @@
     
     /* Pie Chart Sizing - Reduced size */
     .pie-chart-img {
-        max-width: 50%; /* Reduced to 50% for Figure 3 */
+        max-width: 50%; 
         height: auto;
         margin: 0 auto;
         display: block;
@@ -201,8 +201,8 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 0.5rem;
-        overflow: hidden; /* Ensure content stays within bounds */
-        border-radius: 8px; /* Match image border radius */
+        overflow: hidden; 
+        border-radius: 8px; 
     }
     
     .flex-chart-column .chart-image {
@@ -210,29 +210,26 @@
         width: auto; /* Allow width to adjust */
         max-width: 100%;
         object-fit: contain; /* Maintain aspect ratio */
-        box-shadow: none; /* Shadow applied to wrapper if needed, or keep on image */
+        box-shadow: none; 
     }
     
-    /* [MODIFIED] Specific adjustment for Figure 8 (Heatmap) */
+    /* [MAINTAINED] Specific adjustment for Figure 8 (Heatmap) */
     #fig8-img {
         width: 100%;
         height: 100%;
-        /* CHANGED from cover to contain to prevent cutting */
         object-fit: contain; 
     }
 
-    /* [MODIFIED] Wrapper to align message boxes at the top */
+    /* Wrapper to align message boxes at the top */
     .flex-chart-column .message-box-wrapper {
         flex-grow: 1; 
         display: flex;
         flex-direction: column;
-        /* CHANGED from flex-end to flex-start so boxes start at the same vertical level */
         justify-content: flex-start; 
     }
     
     .flex-chart-column .message-box {
         height: auto; 
-        /* Removed min-height enforcement to let content dictate size naturally */
     }
 
 
@@ -357,7 +354,10 @@
 
         <div class="content has-text-justified" id="market-growth">
           <p>
-            To understand the true scale of the "E-commerce Revolution," we must first examine the historical data. By tracing total annual U.S. e-commerce sales from 1993 to 2023 using Census Bureau data, we aimed to quantify the absolute growth of the digital market over the last three decades. The resulting trajectory is not merely linear but exponential. Starting from near-zero, the market has exploded into a dominant economic force. Although there is a slight correction in 2023 due to post-pandemic normalization, the long-term upward trend remains robust, confirming that the shift to online retail is a permanent structural change in the economy rather than a temporary trend.
+            To understand the true scale of the "E-commerce Revolution," we first examined the historical data of annual U.S. e-commerce sales from 1993 to 2023. The chart below visualizes the absolute monetary growth of the digital market.
+          </p>
+          <p>
+            The trajectory shown in <strong>Figure 1a</strong> is a classic "J-curve," indicating exponential rather than linear growth. Starting from near-zero in the early 90s, the market has exploded into a dominant economic force, particularly accelerating during the 2010s. Although there is a visible correction in 2023 due to post-pandemic normalization, the long-term upward trend remains remarkably robust. This graph confirms that the shift to online retail is a fundamental structural change in the economy, representing hundreds of billions of dollars in transaction volume.
           </p>
         </div>
         <div class="chart-container has-text-centered">
@@ -370,7 +370,10 @@
             <h3 class="title is-4"><span class="icon"><i class="fas fa-exchange-alt"></i></span> The Great Divergence: Online vs. Offline</h3>
             <div class="content has-text-justified">
               <p>
-                Since absolute growth numbers can be abstract, we compared the growth rates of E-commerce directly against Traditional Clothing Retail, indexing both to 1999 levels (Index=100) to visualize the relative speed of adoption. The result is a dramatic "Great Divergence." While traditional retail (dark blue line) has seen only modest growth reflecting market saturation, the e-commerce sector (light blue line) has surged by over <strong>1,200%</strong>. This massive gap serves as definitive visual proof of the "Retail Apocalypse" for brick-and-mortar stores and the simultaneous digital renaissance.
+                Absolute growth numbers can be abstract, so we compared the relative growth rates of E-commerce against Traditional Clothing Retail, indexing both to their 1999 levels (Index=100). This comparison highlights the speed of adoption for each channel.
+              </p>
+              <p>
+                The result is a dramatic "Great Divergence," as seen in <strong>Figure 1b</strong>. The dark blue line (Traditional Retail) remains relatively flat, hovering near the baseline, which indicates market saturation and stagnation in brick-and-mortar stores. In stark contrast, the light blue line (E-commerce) has surged vertically, recording growth of over <strong>1,200%</strong>. This massive gap serves as definitive visual proof of the "Retail Apocalypse" for physical stores and the simultaneous digital renaissance, illustrating how wealth and consumer attention have aggressively migrated to digital platforms.
               </p>
             </div>
             
@@ -399,7 +402,10 @@
 
         <div class="content has-text-justified" id="demographics">
           <p>
-              With the macro scale established, we turn to the micro-level to identify exactly who these shoppers are. Using a dataset of 3,900 individuals, we analyzed the consumer base by age and gender to test the common stereotype that online shopping is dominated solely by the "tech-savvy" younger generation (Gen Z). Contrary to this belief, the data in <strong>Figure 2a</strong> reveals a surprisingly even distribution of shoppers across all age brackets, from 20s to 60s. This implies that e-commerce is no longer a niche for the young; it is a universal norm. Marketing strategies that focus exclusively on youth are likely missing a massive portion of the active consumer base.
+              With the macro scale established, we turn to the micro-level to identify exactly who these shoppers are. Using a dataset of 3,900 individuals, we analyzed the consumer base by age and gender to test the common stereotype that online shopping is dominated solely by the "tech-savvy" younger generation (Gen Z).
+          </p>
+          <p>
+              <strong>Figure 2a</strong> breaks down the number of customers by age group. Contrary to the belief that youth dominate the web, the bar chart shows a surprisingly even distribution across all age brackets, from individuals in their 20s up to those in their 60s. The bars are nearly equal in height, implying that e-commerce has become a universal norm rather than a generational niche. Additionally, <strong>Figure 2b</strong> illustrates the gender composition, providing a complete demographic profile of the active consumer base. Together, these charts suggest that marketing strategies focusing exclusively on youth are likely missing a massive portion of the active, older consumer base.
           </p>
         </div>
         
@@ -434,7 +440,10 @@
         <div class="content has-text-justified">
           <h3 class="title is-4">What are they buying?</h3>
           <p>
-             Understanding <em>who</em> is shopping is important, but knowing <em>what</em> they buy reveals the true engine of the market. We analyzed sales data by product category to identify which sectors are driving the e-commerce boom. As shown in the chart below, 'Clothing' is the undisputed leader, accounting for <strong>44.5%</strong> of all transactions. When combined with 'Accessories' and 'Footwear', fashion-related items make up over 90% of the dataset, validating the premise that the e-commerce revolution is intrinsically a "Fashion Revolution."
+             Understanding <em>who</em> is shopping is important, but knowing <em>what</em> they buy reveals the true engine of the market. We analyzed sales data by product category to identify which sectors are driving the e-commerce boom.
+          </p>
+          <p>
+             The pie chart in <strong>Figure 3</strong> provides a clear answer. 'Clothing' is the undisputed leader, accounting for <strong>44.5%</strong> of all transactions. When combined with 'Accessories' (31.7%) and 'Footwear', fashion-related items make up the overwhelming majority (over 90%) of the dataset. This visual evidence validates the premise that the e-commerce revolution is intrinsically a "Fashion Revolution." The dominance of wearables over other goods suggests that online platforms have successfully overcome the barrier of "trying things on," becoming the primary venue for style consumption.
           </p>
         </div>
 
@@ -450,6 +459,18 @@
         <br>
 
         <h3 class="title is-4"><span class="icon"><i class="fas fa-lightbulb"></i></span> Strategic Insights: Spending Power & Timing</h3>
+        
+        <div class="content has-text-justified">
+            <p>
+                To develop a more strategic understanding of the market, we analyzed two critical dimensions: the relationship between age and spending power, and the impact of seasonality on sales volume.
+            </p>
+            <p>
+                First, <strong>Figure 4</strong> examines whether younger shoppers spend more than older generations. By plotting age (X-axis) against total purchase amount (Y-axis), we found a remarkably <strong>flat trend line</strong>. There is no significant upward or downward slope, which indicates that purchasing power is effectively <strong>age-independent</strong>. A customer in their 60s is just as valuable in terms of transaction size as a customer in their 20s, debunking the myth that older demographics are 'low-value' users.
+            </p>
+            <p>
+                Second, <strong>Figure 5</strong> visualizes the temporal patterns of sales using a heatmap, where darker colors represent higher sales volumes. This analysis reveals a dramatic surge in activity during <strong>December</strong> across almost all categories. The intense dark regions in the 'Winter' column contrast sharply with the lighter colors of other months. This recurring pattern confirms that despite the 24/7 accessibility of online shopping, consumer behavior is still heavily dictated by seasonal events, specifically the holiday gifting season.
+            </p>
+        </div>
         
         <div class="columns is-centered is-multiline">
            <div class="column is-6 flex-chart-column">
@@ -483,7 +504,10 @@
         <h3 class="title is-4"><span class="icon"><i class="fas fa-smile"></i></span> Customer Satisfaction</h3>
         <div class="content has-text-justified">
             <p>
-                Finally, we examined customer review ratings across product categories to assess the quality and maturity of the online market. As seen in the box plots, the median rating is consistently high (around 3.8) across all categories. This indicates that there are no major pain points in specific items, suggesting the market has reached a level of maturity where product quality and service are reliable.
+                Finally, we examined customer review ratings across product categories to assess the quality and maturity of the online market. <strong>Figure 6</strong> uses box plots to show the distribution of ratings (from 1 to 5) for each item type.
+            </p>
+            <p>
+                The data shows that the median rating is consistently high, hovering around <strong>3.8 out of 5</strong> for all categories. Furthermore, the spread of the data (the height of the boxes) is uniform, meaning there is very little variation in customer satisfaction regardless of what they buy. This indicates that there are no major "pain points" or specific items that consistently disappoint customers. It suggests the online fashion market has reached a level of maturity where product quality and service are reliable enough to maintain a steady baseline of customer satisfaction.
             </p>
         </div>
         <div class="chart-container has-text-centered">
